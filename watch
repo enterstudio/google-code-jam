@@ -1,0 +1,4 @@
+#!/bin/bash
+# run from assignment dir.
+# watches input.txt and main,py
+fswatch -o ./main.py input.txt | xargs -n1 bash -c 'python3 ./main.py < ./input.txt >| ./output.txt'
